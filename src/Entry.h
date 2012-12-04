@@ -12,7 +12,6 @@ class Entry {
 
     public:
 	  Entry(string K, V v);
-	  //~Entry();
 	  string getKey();
 	  V getValue();
 	  void setValue(V v);

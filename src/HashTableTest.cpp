@@ -6,77 +6,77 @@ using std::cout;
 using std::endl;
 
 int main() {
-    HashTable<int>* intHash = new HashTable<int>(0);
-    
+    //Integer HashTable...default value is 0
     cout << "Integer insert, find, and remove" << endl;
-    cout << "Value f(not in table) is: " << intHash->find("f") << endl;
+    HashTable<int>* intHash = new HashTable<int>(0);
+
+    cout << "Value of f(not in table) is: " << intHash->find("f") << endl;
     cout << endl;
     
-    intHash->insert("h", 8);
+    intHash->insert("eight", 8);
     cout << endl;
     
-    intHash->insert("g", 7);
+    intHash->insert("seven", 7);
     cout << endl;
     
-    cout << "Value g is: " << intHash->find("g") << endl;
+    cout << "Value of seven is: " << intHash->find("seven") << endl;
     cout << endl;
     
-    cout << "Value h is: " << intHash->find("h") << endl;
+    cout << "Value of eight is: " << intHash->find("eight") << endl;
     cout << endl;
     
-    intHash->remove("h");
+    intHash->remove("eight");
     cout << endl;
     
-    cout << "Find value of removed key h: " << intHash->find("h") << endl;
+    cout << "Find value of removed key eight: " << intHash->find("eight") << endl;
     
+    //Double HashTable...default value is 0.0001
     cout << "Double insert, find, and remove" << endl;
     HashTable<double>* dHash = new HashTable<double>(0.0001);
     
-    cout << "Value f(not in table) is: " << dHash->find("f") << endl;
+    cout << "Value of f(not in table) is: " << dHash->find("f") << endl;
     cout << endl;
     
-    dHash->insert("h", 8.5618);
-    cout << endl;
-    cout << "Value h is: " << dHash->find("h") << endl;
-    
-    dHash->insert("g", 77.777);
+    dHash->insert("say", 8.5618);
     cout << endl;
     
-    cout << "Value g is: " << dHash->find("g") << endl;
+    dHash->insert("what", 77.777);
     cout << endl;
     
-    cout << "Value h is: " << dHash->find("h") << endl;
+    cout << "Value of what is: " << dHash->find("what") << endl;
     cout << endl;
     
-    dHash->remove("h");
+    cout << "Value of say is: " << dHash->find("say") << endl;
     cout << endl;
     
-    cout << "Find value of removed key h: " << dHash->find("h") << endl;
+    dHash->remove("say");
+    cout << endl;
+    
+    cout << "Find value of removed key say: " << dHash->find("say") << endl;
 
+    //String HashTable...default value is an empty string
     cout << "String insert, find, and remove" << endl;
-    //HashTable<string>* strHash = new HashTable<string>("default");
-    HashTable<string>* strHash = new HashTable<string>("");
+    HashTable<string>* strHash = new HashTable<string>(" ");
     
-    cout << "Value f(not in table) is: " << strHash->find("f") << endl;
+    cout << "Value of f(not in table) is: " << strHash->find("f") << endl;
     cout << endl;
     
-    strHash->insert("h", "hello");
-    cout << endl;
-    cout << "Value h is: " << strHash->find("h") << endl;
-    
-    strHash->insert("g", "goodbye");
+    strHash->insert("hi", "hello");
     cout << endl;
     
-    cout << "Value g is: " << strHash->find("g") << endl;
+    strHash->insert("bye", "goodbye");
     cout << endl;
     
-    cout << "Value h is: " << strHash->find("h") << endl;
+    cout << "Value of bye is: " << strHash->find("bye") << endl;
     cout << endl;
     
-    strHash->remove("h");
+    cout << "Value of hi is: " << strHash->find("hi") << endl;
     cout << endl;
     
-    cout << "Find value of removed key h: " << strHash->find("h") << endl;
-
+    strHash->remove("hi");
+    cout << endl;
+    
+    cout << "Find value of removed key hi: " << strHash->find("hi") << endl;
+    
     return 0;
 }

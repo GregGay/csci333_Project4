@@ -11,12 +11,12 @@ HashTable<V>::HashTable(V def) {
     table = new list<Entry<V>* >[1009];
     Def = def;
 }
-/*
-template <template V>
+
+template <typename V>
 HashTable<V>::~HashTable() {
     delete[] table;
 }
-*/
+
 template <typename V>
 int HashTable<V>::hashFunction(string key) {
     int size = 1009; 	//prime number

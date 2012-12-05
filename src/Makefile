@@ -8,7 +8,7 @@ main: HashTableTest.cpp HashTable.o Entry.o
 	  $(CPP) $(CFLAGS) -o $(BUILD)/HashTest HashTableTest.cpp HashTable.o Entry.o
 
 main2: ETest.cpp Entry.o
-	  $(CPP) $(CFALGS) -o $(BUILD)/EntryTest ETest.cpp Entry.o
+	  $(CPP) $(CFLAGS) -o $(BUILD)/EntryTest ETest.cpp Entry.o
 
 Entry.o: Entry.h Entry.cpp
 	  $(CPP) $(CFLAGS) -c Entry.cpp

@@ -78,5 +78,8 @@ int main() {
     
     cout << "Find value of removed key hi: " << strHash->find("hi") << endl;
     
+    delete intHash;
+    delete dHash;
+    delete strHash;
     return 0;
 }

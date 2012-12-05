@@ -39,7 +39,7 @@ void HashTable<V>::insert(string key, V v) {
     Entry<V>* temp = new Entry<V>(key, v);
     typename list<Entry<V>* >::iterator it;
 
-    for (it = table[x].begin(); it != table[x].end(); ++it) {
+    for (it = table[x].begin(); it != table[x].end(); it++) {
 	  if ((*it)->getKey() == key) {
 		(*it)->setValue(v);
 		return;
@@ -55,7 +55,7 @@ V HashTable<V>::find(string key) {
     typename list<Entry<V>* >::iterator it;
     
     if (!table[x].empty()) {
-	  for (it = table[x].begin(); it != table[x].end(); ++it) {
+	  for (it = table[x].begin(); it != table[x].end(); it++) {
 		if ((*it)->getKey() == key) {
 		    return (*it)->getValue();
 		}
